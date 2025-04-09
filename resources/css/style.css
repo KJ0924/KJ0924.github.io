@@ -1,0 +1,361 @@
+/* common */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #fff;
+    background-color: #fbc855;
+}
+
+a:link,a:visited,a:hover,a:active {
+    text-decoration: none;
+}
+
+.min-width {
+    min-width: 1280px;
+}
+
+.layout {
+    min-height: 100%;
+    padding: 100px 20px 50px;
+    margin-top: -100px;
+    margin-bottom: -50px;
+}
+
+section {
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+hr {
+    margin-top: 50px;
+    border: 1px solid #fff;
+}
+
+.go-top {
+    position: fixed;
+    right: 5px;
+    bottom: 150px;
+    display: inline-block;
+    width: 30px;
+}
+
+.go-top img{
+    width: 100%;
+}
+
+/* header */
+header {
+    display: flow-root;
+    padding: 0 20px;
+}
+
+header .logo-wrapper img {
+    float: left;
+}
+
+header nav {
+    float: right;
+    line-height: 100px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li+li {
+    margin-left: 10px;
+}
+
+header nav ul li a{
+    color: #fff;
+    font-weight: bold;
+}
+
+header nav ul li a:hover{
+    color: royalblue;
+}
+
+header nav ul li a.active{
+    color: royalblue;
+}
+
+/* main */
+main {
+    background-image: url("../images/bg_main.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 800px;
+    padding-top: 300px;
+}
+
+main p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+    color: #fff;
+}
+
+.introduction ul{
+    width: 100%;
+    text-align :center;
+    list-style-type: disc;
+    list-style-position: inside;
+    width: 100%;
+    color: white;
+}
+.introduction ul li+li{
+    margin-top: 10px;
+}
+.introduction ul li span{
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+}
+
+.introduction .hobby {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+}
+
+.introduction .hobby img, .introduction .hobby video{
+    width: 100%;
+}
+
+.introduction .hobby h5 {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill .list-wrapper{
+    display: flow-root;
+    width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill .list-wrapper > div {
+    float:left;
+    padding: 20px;
+    width: 20%;
+    vertical-align: top;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    height: 315px;
+}
+
+.skill .list-wrapper > div + div {
+    margin-left: 20px;
+}
+
+.skill h5 {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.skill ul {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.skill ul li {
+    font-size: 13px;
+    color: #145b1a;
+}
+
+.skill ul li + li{
+    margin-top: 10px;
+}
+
+.skill ul li i[class|=devicon] {
+    vertical-align: middle;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* career */
+.career .list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    align-content: space-between;
+    column-gap: 30px;
+}
+
+.career .list .item{
+    position: relative;
+    transition: transform 1s ease-in;
+    backface-visibility: hidden;
+}
+
+.career .list .item:hover {
+    transform: rotateY(180deg);
+}
+.career .list .item img{
+    width: 100%;
+    background-color: #fff;
+}
+.career .list .item span{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #f00;
+    position:absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: -1;
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+}
+.gallery h1{
+    margin-bottom: 100px;
+}
+.gallery img, .gallery video {
+    width: 400px;
+    transition: all .5s ease-out;
+}
+
+.gallery .item:nth-child(2n+1) label img:hover, .gallery .item:nth-child(2n+1) label video:hover {
+    box-shadow: 10px 10px 10px #00000088;
+    transform: translate(-5px, -5px);
+}
+.gallery .item:nth-child(2n) label img:hover, .gallery .item:nth-child(2n) label video:hover {
+    box-shadow: -10px 10px 10px #00000088;
+    transform: translate(5px, -5px);
+}
+
+.gallery label{
+    cursor: pointer;
+}
+.gallery .wrapper{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery .wrapper .item:nth-child(2n+1) {
+    text-align: left;
+}
+
+.gallery .wrapper .item:nth-child(2n){
+    text-align: right;
+}
+
+.gallery *[id^=focusin]{
+    display: fixed;
+    top:0;
+    left:0;
+    border: none;
+    width:0px;
+    height: 0px;
+}
+
+.gallery *[id^=focusin] ~ .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #69696999;
+    opacity: 0;
+    display: none;
+    z-index: 999;
+}
+
+.gallery *[id^=focusin]:focus + .overlay {
+    display: flex;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.gallery .overlay img, .gallery .overlay video {
+    border: 5px solid orange;
+}
+
+@keyframes fadein{
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* footer */
+footer {
+    padding: 0 20px;
+    height: 100px;
+}
+
+footer .copy {
+    float: left;
+    line-height: 100px;
+}
+
+footer .sns {
+    float: right;
+}
+
+footer .sns ul {
+    list-style-type: none;
+}
+
+footer .sns ul li {
+    line-height: 100px;
+    display: inline;
+}
+
+footer .sns ul li + li {
+    margin-left: 10px
+}
+
+footer .sns ul li a{
+    font-size: 20px;
+    color: #000;
+}
+
+footer .sns ul li img{
+    width: 20px;
+}
