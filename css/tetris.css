@@ -1,0 +1,13 @@
+body>div{
+    background-image: url(../img/tetris.png);
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
+h1{
+    color: white;
+    font-size: 80px;
+}
